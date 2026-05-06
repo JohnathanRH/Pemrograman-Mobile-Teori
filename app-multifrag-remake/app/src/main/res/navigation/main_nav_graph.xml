@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/first">
+
+    <fragment
+        android:id="@+id/first"
+        android:name="com.example.multifragremake.First"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_first_to_second"
+            app:destination="@id/second" />
+    </fragment>
+    <fragment
+        android:id="@+id/second"
+        android:name="com.example.multifragremake.Second"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_second_to_first"
+            app:destination="@id/first" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_second_to_third"
+            app:destination="@id/third" />
+    </fragment>
+    <fragment
+        android:id="@+id/third"
+        android:name="com.example.multifragremake.Third"
+        android:label="fragment_third"
+        tools:layout="@layout/fragment_third" >
+        <argument
+            android:name="nama"
+            app:argType="string" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_third_to_second"
+            app:destination="@id/second" />
+        <action
+            android:id="@+id/action_third_to_fourth"
+            app:destination="@id/fourth" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourth"
+        android:name="com.example.multifragremake.Fourth"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="hobby"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fourth_to_third2"
+            app:destination="@id/third" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fourth_to_fifth2"
+            app:destination="@id/fifth2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fifth2"
+        android:name="com.example.multifragremake.Fifth"
+        android:label="fragment_fifth"
+        tools:layout="@layout/fragment_fifth" >
+        <action
+            android:id="@+id/action_fifth2_to_fourth"
+            app:destination="@id/fourth" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument android:name="hobby"
+            app:argType="string" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <argument
+            android:name="favorite"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fifth2_to_sixth"
+            app:destination="@id/sixth" />
+    </fragment>
+    <fragment
+        android:id="@+id/sixth"
+        android:name="com.example.multifragremake.Sixth"
+        android:label="fragment_sixth"
+        tools:layout="@layout/fragment_sixth" >
+        <action
+            android:id="@+id/action_sixth_to_fifth2"
+            app:destination="@id/fifth2" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument android:name="hobby"
+            app:argType="string" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <argument
+            android:name="favorite"
+            app:argType="string" />
+        <argument
+            android:name="bestFriend"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_sixth_to_seventh"
+            app:destination="@id/seventh" />
+    </fragment>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="name: string &#xA;hobby: string &#xA;asal: string &#xA;favorite: string " />
+    <fragment
+        android:id="@+id/seventh"
+        android:name="com.example.multifragremake.Seventh"
+        android:label="fragment_seventh"
+        tools:layout="@layout/fragment_seventh" >
+        <action
+            android:id="@+id/action_seventh_to_sixth"
+            app:destination="@id/sixth" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument android:name="hobby"
+            app:argType="string" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <argument
+            android:name="favorite"
+            app:argType="string" />
+        <argument
+            android:name="bestFriend"
+            app:argType="string" />
+        <argument
+            android:name="school"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_seventh_to_eighth"
+            app:destination="@id/eighth" />
+    </fragment>
+    <fragment
+        android:id="@+id/eighth"
+        android:name="com.example.multifragremake.Eighth"
+        android:label="fragment_eighth"
+        tools:layout="@layout/fragment_eighth" >
+        <action
+            android:id="@+id/action_eighth_to_seventh"
+            app:destination="@id/seventh" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <argument
+            android:name="hobby"
+            app:argType="string" />
+        <argument
+            android:name="favorite"
+            app:argType="string" />
+        <argument
+            android:name="bestFriend"
+            app:argType="string" />
+        <argument
+            android:name="school"
+            app:argType="string" />
+        <argument
+            android:name="favoriteMapel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_eighth_to_ninth"
+            app:destination="@id/ninth" />
+    </fragment>
+    <fragment
+        android:id="@+id/ninth"
+        android:name="com.example.multifragremake.Ninth"
+        android:label="fragment_ninth"
+        tools:layout="@layout/fragment_ninth" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <argument
+            android:name="hobby"
+            app:argType="string" />
+        <argument
+            android:name="favorite"
+            app:argType="string" />
+        <argument android:name="bestFriend"
+            app:argType="string" />
+        <argument
+            android:name="school"
+            app:argType="string" />
+        <argument
+            android:name="favoriteMapel"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ninth_to_eighth"
+            app:destination="@id/eighth" />
+        <argument
+            android:name="futureCareer"
+            app:argType="string" />
+    </fragment>
+</navigation>
