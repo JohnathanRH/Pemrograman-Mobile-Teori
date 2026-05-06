@@ -45,32 +45,33 @@ class Ninth : Fragment() {
         val btnForward = view.findViewById<Button>(R.id.btn_forward)
         val textField = view.findViewById<EditText>(R.id.textField)
 
-        tv.setText("${args.favoriteMapel} memang terdengar asik dan juga bermanfaat. Kamu mau jadi apa di masa depan ${args.name}?")
+        tv.setText("Wow kamu mau jadi ${args.futureCareer}? sangat ambisius! Banyak-banyak belajar ya ${args.name}. ${args.school} pasti akan membantu mu")
 
         btnBackward.setOnClickListener {
-            val action = EighthDirections.actionEighthToSeventh(
-                args.name,
-                args.hobby,
-                args.asal,
-                args.favorite,
-                args.bestFriend,
-                args.school
-            )
-        }
-
-        btnForward.setOnClickListener {
-            val str = textField.getText().toString()
-            val action = EighthDirections.actionEighthToNinth(
+            val action = NinthDirections.actionNinthToEighth(
                 args.name,
                 args.asal,
                 args.hobby,
                 args.favorite,
                 args.bestFriend,
                 args.school,
-                args.favoriteMapel,
-                str
+                args.favoriteMapel
             )
-            Navigation.findNavController(view).navigate(action)
+        }
+
+        btnForward.setOnClickListener {
+            val str = textField.getText().toString()
+//            val action = (
+//                args.name,
+//                args.asal,
+//                args.hobby,
+//                args.favorite,
+//                args.bestFriend,
+//                args.school,
+//                args.favoriteMapel,
+//                str
+//            )
+//            Navigation.findNavController(view).navigate(action)
         }
 
         return view
