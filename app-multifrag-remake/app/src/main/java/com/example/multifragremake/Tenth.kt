@@ -18,11 +18,11 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Ninth.newInstance] factory method to
+ * Use the [Tenth.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Ninth : Fragment() {
-    val args : NinthArgs by navArgs()
+class Tenth : Fragment() {
+    val args : TenthArgs by navArgs()
     private var param1: String? = null
     private var param2: String? = null
 
@@ -45,23 +45,10 @@ class Ninth : Fragment() {
         val btnForward = view.findViewById<Button>(R.id.btn_forward)
         val textField = view.findViewById<EditText>(R.id.textField)
 
-        tv.setText("Wow kamu mau jadi ${args.futureCareer}? sangat ambisius! Banyak-banyak belajar ya ${args.name}. ${args.school} pasti akan membantu mu.")
+        tv.setText("Senang berkenalan ${args.name} dari ${args.asal}. Terus asah kemampuan ${args.hobby} dan pelajari benar benar tentang ${args.favoriteMapel}")
 
         btnBackward.setOnClickListener {
-            val action = NinthDirections.actionNinthToEighth(
-                args.name,
-                args.asal,
-                args.hobby,
-                args.favorite,
-                args.bestFriend,
-                args.school,
-                args.favoriteMapel
-            )
-        }
-
-        btnForward.setOnClickListener {
-            val str = textField.getText().toString()
-            val action = NinthDirections.actionNinthToTenth(
+            val action = TenthDirections.actionTenthToNinth(
                 args.name,
                 args.asal,
                 args.hobby,
@@ -71,7 +58,6 @@ class Ninth : Fragment() {
                 args.favoriteMapel,
                 args.futureCareer
             )
-            Navigation.findNavController(view).navigate(action)
         }
 
         return view
@@ -84,12 +70,12 @@ class Ninth : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Ninth.
+         * @return A new instance of fragment Tenth.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Ninth().apply {
+            Tenth().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

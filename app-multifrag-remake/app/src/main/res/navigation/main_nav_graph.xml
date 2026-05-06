@@ -117,10 +117,7 @@
             android:id="@+id/action_sixth_to_seventh"
             app:destination="@id/seventh" />
     </fragment>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="name: string &#xA;hobby: string &#xA;asal: string &#xA;favorite: string " />
+
     <fragment
         android:id="@+id/seventh"
         android:name="com.example.multifragremake.Seventh"
@@ -211,6 +208,42 @@
         <action
             android:id="@+id/action_ninth_to_eighth"
             app:destination="@id/eighth" />
+        <argument
+            android:name="futureCareer"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_ninth_to_tenth"
+            app:destination="@id/tenth" />
+    </fragment>
+    <fragment
+        android:id="@+id/tenth"
+        android:name="com.example.multifragremake.Tenth"
+        android:label="fragment_tenth"
+        tools:layout="@layout/fragment_tenth" >
+        <action
+            android:id="@+id/action_tenth_to_ninth"
+            app:destination="@id/ninth" />
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="asal"
+            app:argType="string" />
+        <argument
+            android:name="hobby"
+            app:argType="string" />
+        <argument
+            android:name="favorite"
+            app:argType="string" />
+        <argument
+            android:name="bestFriend"
+            app:argType="string" />
+        <argument
+            android:name="school"
+            app:argType="string" />
+        <argument
+            android:name="favoriteMapel"
+            app:argType="string" />
         <argument
             android:name="futureCareer"
             app:argType="string" />
