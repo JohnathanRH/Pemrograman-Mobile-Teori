@@ -6,6 +6,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.switchmaterial.SwitchMaterial
 
@@ -28,10 +29,16 @@ class ViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
     public fun bind(item: ItemModel, index: Int){
         val context = view.context
+        val backgroundColor = if(index % 2 == 0){
+            context.getColor(R.color.white)
+        } else {
+            context.getColor(R.color.greenish)
+        }
 
         productImg.setImageDrawable(context.getDrawable(item.imgResourceId))
         title.text = item.title
         subtitle.text = item.subTitle
+        cardView.setCardBackgroundColor(backgroundColor)
 
         switch.setOnCheckedChangeListener { _, isChecked ->
             if(isChecked){

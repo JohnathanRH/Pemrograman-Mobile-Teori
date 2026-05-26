@@ -37,7 +37,7 @@ fun Card(item: ItemModel, position: Int){
     var checked by remember { mutableStateOf(false) }
     val context = LocalContext.current
 
-    val backgroundColor = if ((position + 1) % 2 == 0) {
+    val backgroundColor = if (position % 2 == 0) {
         colorResource(R.color.white)
     } else {
         colorResource(R.color.greenish)
