@@ -33,6 +33,16 @@ class MainActivity : AppCompatActivity() {
                 imgResourceId = R.drawable.happy,
                 title = "Item Ketiga",
                 subTitle = "Deskripsi item ketiga"
+            ),
+            ItemModel(
+                imgResourceId = R.drawable.frown,
+                title = "Item Keempat",
+                subTitle = "Deskripsi item keempat"
+            ),
+            ItemModel(
+                imgResourceId = R.drawable.happy,
+                title = "Item Ketiga",
+                subTitle = "Deskripsi item kelima"
             )
         )
 
