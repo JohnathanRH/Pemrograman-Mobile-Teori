@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Compose</string>
+    <string name="title_towerDefenseX">Tower Defense X</string>
+    <string name="title_unknownThreat">Unknown Threat</string>
+    <string name="title_stronghold">Stronghold: Crusader</string>
+    <string name="title_mountAndBlade">Mount and Blade: Warband</string>
+    <string name="title_residentEvil">Resident Evil</string>
+    <string name="lang_title">Lenguaje</string>
+    <string name="lang_btn_en">Ingles</string>
+    <string name="lang_btn_es">Espanol</string>
+    <string name="desc_towerDefenseX">"Juego de defensa de torres zombie con torres enemigas únicas de fn.  "</string>
+    <string name="desc_unknownThreat">Esconder y buscar digabung dengan simulasi pembunuhan masal. Dianjurkan hanya para orang dewasa</string>
+    <string name="desc_stronghold">Un juego de estrategia en tiempo real (RTS) ambientado en la época medieval. No tiene historia, pero sí una campaña inspirada en acontecimientos históricos de la Segunda Cruzada.</string>
+    <string name="desc_mountAndBlade">Un juego de rol realista de mundo abierto ambientado en la Edad Media. Jugamos como un humilde aventurero que intenta ascender en la escala social.</string>
+    <string name="desc_residentEvil">LEEEOOOOOOOOOOON AYUDAAAAAA!!!</string>
+</resources>

@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val tvCode = findViewById<TextView>(R.id.tvCode)
         val tvData = findViewById<TextView>(R.id.tvData)
 
-        // Fetch data asynchronously
         lifecycleScope.launch {
             try {
                 val response: ApiResponse<UserProfile> = MockApiClient.client
